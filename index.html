@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Puzzle Cam</title>
+        <script src="script.js"></script>
+        <link href="style.css" rel="stylesheet"/>     
+    </head>
+    <body onload = "main()">    
+        <canvas id = "myCanvas"></canvas>
+        <div id = "menuItems" class ="menu">
+            <div id = "menu">
+                <div id = "controls"></div>
+                <img src ="./img/logo.png" style ="width:90%">
+                    Difficulty <select id = "difficulty" onchange = "setDifficulty()">
+                        <option value ="easy"> Easy </option>
+                        <option value ="medium"> Medium </option>
+                        <option value ="hard"> Hard </option>
+                        <option value ="insane"> Insane </option>
+                    </select>
+                    </br>
+                    </br>
+                    <button onclick = "restart()"> Start </button>
+            </div>
+        </div>
+        <div id = "endScreen" class ="menu" style="display:none;">
+            <img src ="./img/logo.png" style ="width:90%">
+            <br>
+            <br>
+
+            <div id = "scoresValue"></div>
+            <input type = "text" id = "name" placeholder = "your name...">
+            <button onclick="saveScore()" id = "saveBtn"> Save </button>
+            <br>
+            <br>
+            <button onclick= "showScores()"> Show Scores</button>
+            <button onclick= "showMenu()">Menu</button>
+        </div>
+
+        <div id ="scoresScreen" class ="menu" style="display:none;">
+            <img src ="./img/logo.png" style ="width:90%">
+            <br>
+            <br>
+
+            <div id ="scoresContainer"></div>
+            <br>
+            <button onclick="closeScores()">Back</button>
+        </div>
+
+        <div id = "time"></div>
+    </body>
+</html>
